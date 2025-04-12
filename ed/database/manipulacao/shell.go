@@ -6,45 +6,122 @@ import (
 	"os"
 	"strconv"
 	"strings"
+	"sort"
 )
 
 func getMen(vet []int) []int {
-	_ = vet
-	return nil
+	 var homem []int
+	 for _, elem := range vet {
+		 if elem > 0 {
+			homem = append(homem, elem)
+		 }
+	 }
+	 return homem
 }
 
 func getCalmWomen(vet []int) []int {
-	_ = vet
-	return nil
+	var mulher []int 
+	for _, elem := range vet {
+		if elem < 0 && elem > -10{
+			mulher = append(mulher, elem)
+		}
+	}
+	return mulher
 }
 
+
 func sortVet(vet []int) []int {
-	_ = vet
-	return nil
+	newsort := make([]int, len(vet))
+	copy(newsort, vet)
+
+	sort.Slice(newsort, func(i, j int) bool {
+		return newsort[i] < newsort[j]
+	})
+	return newsort
 }
 
 func sortStress(vet []int) []int {
-	_ = vet
-	return nil
+	newsort := make([]int, len(vet))
+	copy(newsort, vet)
+
+	sort.Slice(newsort, func(i, j int) bool {
+		if newsort[j] < 0 && newsort[i] < 0 {
+			return -newsort[i] < -newsort[j]
+		}else if newsort[j] < 0 {
+			return newsort[i] < -newsort[j]
+		} else if newsort[i] < 0 {
+			return -newsort[i] < newsort[j]
+		}else{
+			return newsort[i] < newsort[j]
+		}
+	})
+	return newsort
 }
 
 func reverse(vet []int) []int {
-	_ = vet
-	return nil
+	reverte := make([]int, 0 , len(vet))
+
+	for i := len(vet) - 1; i >= 0; i--{
+		reverte = append(reverte, vet[i])
+	}
+	return reverte
 }
 
 func reverseInplace(vet []int) {
 	_ = vet
 }
+
 func unique(vet []int) []int {
-	_ = vet
-	return nil
+    var unico []int
+    
+    contains := func(slice []int, valor int) bool {
+        for _, elem := range slice {
+            if elem == valor {
+                return true
+            }
+        }
+        return false
+    }
+    
+    for _, elem := range vet {
+        if !contains(unico, elem) {
+            unico = append(unico, elem)
+        }
+    }
+    return unico
 }
 
 func repeated(vet []int) []int {
-	_ = vet
-	return nil
+    contador := make(map[int]int)
+    numerosUnicos := make(map[int]bool)
+    var repetidos []int
+
+    for _, num := range vet {
+        contador[num]++
+    }
+
+    for num, count := range contador {
+        if count > 1 {
+            numerosUnicos[num] = true
+        }
+    }
+
+    var numeros []int
+    for num := range numerosUnicos {
+        numeros = append(numeros, num)
+    }
+
+    sort.Ints(numeros)
+
+    for _, num := range numeros {
+        for i := 0; i < contador[num]-1; i++ {
+            repetidos = append(repetidos, num)
+        }
+    }
+
+    return repetidos
 }
+
 
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
