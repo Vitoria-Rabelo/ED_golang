@@ -14,53 +14,169 @@ type Pair struct {
 }
 
 func occurr(vet []int) []Pair {
-	_ = vet
-	return nil
+	var contador = make(map[int]int)
+
+	for _, elem := range vet {
+		if elem < 0 {
+			elem = -elem
+		}
+
+		contador[elem]++
+	}
+
+	var pares []Pair
+
+	for i, count := range contador {
+		pares = append(pares, Pair{One: i, Two: count})
+	}
+
+	for i := 0; i < len(pares); i++{
+		for j := i + 1; j < len(pares); j++ {
+			if pares[i].One > pares[j].One {
+				pares[i], pares[j] = pares[j], pares[i]
+			}
+		}
+	}
+	return pares
 }
 
 func teams(vet []int) []Pair {
-	_ = vet
-	return nil
+	var resultado []Pair
+
+	if len(vet) == 0 {
+		return resultado
+	}
+	atual := vet[0]
+	cont := 1
+	for i := 1; i < len(vet); i++ {
+		if vet[i] == atual {
+			cont++
+		} else {
+			resultado = append(resultado, Pair{One: atual, Two: cont})
+			atual = vet[i]
+			cont = 1
+		}
+	}
+	resultado = append(resultado, Pair{One: atual, Two: cont})
+
+	return resultado
 }
 
+
 func mnext(vet []int) []int {
-	_ = vet
-	return nil
+	slice := make([]int , 0, len(vet))
+ 
+	for i := 0; i < len(vet); i++ {
+		elem := 0
+		if  vet[i] > 0{
+			if (i > 0 && vet[i-1] < 0) || (i < len(vet)-1 && vet[i+1] < 0){
+				elem = 1
+			}
+		}else {
+			elem = 0
+		}
+		slice = append(slice, elem)
+	}
+	return slice
 }
 
 func alone(vet []int) []int {
-	_ = vet
-	return nil
+	slice := make([]int, 0, len(vet))
+	for i := 0; i < len(vet); i++ {
+		elem := 0
+
+		if vet[i] > 0 {
+			if len(vet) == 1 {
+				elem = 1
+			} else if i == 0 {
+				if vet[i+1] > 0 {
+					elem = 1
+				}
+			} else if i == len(vet)-1 {
+				if vet[i-1] > 0 {
+					elem = 1
+				}
+			} else {
+				if vet[i-1] > 0 && vet[i+1] > 0 {
+					elem = 1
+				}
+			}
+		}
+		slice = append(slice, elem)
+	}
+	return slice
 }
 
 func couple(vet []int) int {
-	_ = vet
-	return 0
+	count := 0 
+
+	for i := 0; i < len(vet); i++ {
+		if vet[i] == 0 {
+			continue
+		}
+		if vet[i]  != 0{
+			for j := i + 1; j < len(vet); j++ {
+				if vet[j] == -vet[i]{
+					count++
+					vet[j] = 0
+					vet[i] = 0
+					break
+				}
+			}
+		}
+	}
+		return count
 }
 
 func hasSubseq(vet []int, seq []int, pos int) bool {
-	_ = vet
-	_ = seq
-	_ = pos
-	return false
+	if len(vet) < pos + len(seq){
+		return false
+	}
+
+	for i := 0; i < len(seq); i++{
+		if vet[pos + i] != seq[i]{
+			return false
+		}
+	}
+	return true
 }
 
 func subseq(vet []int, seq []int) int {
-	_ = vet
-	_ = seq
-	return -1
+	for i := 0; i <= len(vet)-len(seq); i++ {
+        if vet[i] == seq[0] && hasSubseq(vet, seq, i) {
+            return i
+        }
+    }
+    return -1
 }
 
 func erase(vet []int, posList []int) []int {
-	_ = vet
-	_ = posList
-	return nil
+	indicesRemover := make(map[int]bool)
+
+	for _, pos := range posList {
+		if pos >= 0 && pos < len(vet) {
+			indicesRemover[pos] = true
+		}
+	}
+	slice := make([]int, 0, len(vet) - len(indicesRemover))
+
+	for i, valor := range vet{
+		if !indicesRemover[i]{
+			slice = append(slice, valor)
+		}
+	}
+	return slice
 }
 
 func clear(vet []int, value int) []int {
-	_ = vet
-	_ = value
-	return nil
+	slice := make([]int, 0, len(vet))
+
+	for _, elem := range vet {
+		if elem != value {
+			slice = append(slice, elem)
+		}
+	}
+	return slice
 }
 
 func main() {
