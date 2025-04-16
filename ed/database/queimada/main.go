@@ -9,11 +9,22 @@ import (
 func tocarFogo(mat [][]rune, l, c int) {
 	nl := len(mat)
 	nc := len(mat[0])
-	_, _, _, _, _ = mat, l, c, nl, nc
-	// se estiver fora da matriz, retorne
-	// se o elemento atual não for uma arvore, retorne
-	// queime a arvore colocando o caractere 'o' na posição atual
-	// chame a recursão para todos os 4 vizinhos
+
+	if l >= nl || c >= nc || l < 0 || c < 0{
+		return
+	} 
+
+	if mat[l][c] != '#' {
+		return
+	}
+
+	mat[l][c] = 'o'
+
+	tocarFogo(mat, l-1, c)
+	tocarFogo(mat,l , c-1)
+	tocarFogo(mat, l+1, c)
+	tocarFogo(mat,l , c+1)
+	
 }
 
 func main() {
