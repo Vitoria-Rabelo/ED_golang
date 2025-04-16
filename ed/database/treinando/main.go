@@ -8,37 +8,88 @@ import (
 	"strings"
 )
 
+func __tostr(vet []int) string {
+	if len(vet) == 0 {
+		return ""
+	}
+
+	if len(vet) == 1 {
+		return fmt.Sprint(vet[0])
+	}
+
+	return fmt.Sprint(vet[0]) + ", " + __tostr(vet[1:])
+	
+	
+} 
+
 func tostr(vet []int) string {
-	_ = vet
-	return ""
+	
+	coisa := __tostr(vet)
+	return "[" + coisa + "]"
+
+}
+
+func __tostrrev(vet []int) string {
+	if len(vet) == 0 {
+		return ""
+	}
+
+	if len(vet) == 1 {
+		return fmt.Sprint(vet[0])
+	}
+
+	return fmt.Sprint(vet[len(vet)-1]) + ", " + __tostrrev(vet[:len(vet)-1])
 }
 
 func tostrrev(vet []int) string {
-	_ = vet
-	return ""
+	return "[" + __tostrrev(vet) + "]"
 }
 
-// reverse: inverte os elementos do slice
+
 func reverse(vet []int) {
-	_ = vet
+	for i, j := 0, len(vet)-1; i < j; i, j = i+1, j-1 {
+		vet[i], vet[j] = vet[j], vet[i]
+	}
+
 }
 
-// sum: soma dos elementos do slice
 func sum(vet []int) int {
-	_ = vet
-	return 0
+	var contador int 
+
+	for _,elem := range vet{
+		contador += elem
+	}
+
+	return contador
 }
 
-// mult: produto dos elementos do slice
 func mult(vet []int) int {
-	_ = vet
-	return 0
+	var multiplica int = 1
+
+	for _, elem := range vet{
+		multiplica *= elem
+	}
+
+	return multiplica
 }
 
-// min: retorna o índice e valor do menor valor
 func min(vet []int) (int, int) {
-	_ = vet
-	return 0, 0
+	if len(vet) == 0{
+		return 0 , -1
+	}
+
+	var indice int = 0
+	menor := vet[0]
+
+	for i, elem := range vet{
+		if elem  < menor {
+			menor = elem
+			indice = i
+		}
+	}
+	
+	return menor, indice
+	
 }
 
 func main() {
