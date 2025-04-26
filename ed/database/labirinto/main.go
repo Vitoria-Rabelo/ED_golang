@@ -26,15 +26,29 @@ func (p Pos) getNeighbors() []Pos {
 
 // Função recursiva que tenta encontrar o caminho do início ao fim
 func procurarSaida(mat [][]rune, atual, fim Pos) bool {
-	_, _, _ = mat, atual, fim
-	// se posição não existir ou não for caminho retorne falso
-	// se posição for o fim retorne verdadeiro
-	// marca a posição atual como possivel caminho usando .
-	// para cada vizinho, chama a função recursivamente
-	// se algum dos meus vizinho for caminho, eu sou caminho
-	// se nenhum vizinho for caminho, eu sou erro
-	// marca a posição atual como erro usando x
-	// retorna falso
+	if atual.l < 0 || atual.l >= len(mat){
+		return false
+	} 
+	if atual.c < 0 || atual.c >= len(mat[0]){
+		return false
+	}
+
+	if atual.l == fim.l && atual.c == fim.c {
+		mat[atual.l][atual.c] = '.'
+		return true
+	}
+
+	mat[atual.l][atual.c] = '.'
+
+	for _, vizinho := range atual.getNeighbors(){
+		if  mat[vizinho.l][vizinho.c] == '_'{
+			if procurarSaida(mat, vizinho, fim) {
+				return true
+			}
+		}
+	}
+
+	mat[atual.l][atual.c] = 'x'
 	return false
 
 }
