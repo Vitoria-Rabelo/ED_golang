@@ -9,8 +9,29 @@ import (
 )
 
 func MagicSearch(slice []int, value int) int {
-	_, _ = slice, value
-	return 0
+	var x int = 0
+
+	for i, elem := range slice{
+		if elem == value{
+			x = i
+		}
+	}
+
+	if x == 0{
+		if len(slice) == 0{
+			return 0
+		} else {
+			for i := range slice{
+				if slice[i] >= value {
+					return i 
+				} 
+				if i == len(slice) - 1 && slice[i] < value{
+					return i + 1
+				}
+			}
+		}
+	}
+	return x
 }
 
 func main() {
