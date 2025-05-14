@@ -20,7 +20,17 @@ func equals(a []int, b []int) bool {
 	// e não pode usar nenhum tipo de laço
 	// Use recursao para consultar os outros elementos equals(a[1:], b[1:])
 	// não altere o protótipo da função nem crie funções auxiliares
-	_, _ = a, b
+	fmt.Scan(a, b)
+
+	if Ehvazio {
+		return true
+	}
+
+	if a == b {
+		equals(a, b)
+		return true
+	}
+	
 	return false
 }
 
