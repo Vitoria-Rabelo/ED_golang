@@ -1,4 +1,4 @@
->>>>>>>> INSERT init
+>>>>>>>> INSERT init e empty show
 show
 end
 ======== EXPECT
@@ -8,7 +8,7 @@ $end
 <<<<<<<< FINISH
 
 
->>>>>>>> INSERT push_front
+>>>>>>>> INSERT push_front <value ...>
 push_front 1 2 3 4
 show
 push_front 9 6
@@ -78,7 +78,7 @@ $end
 <<<<<<<< FINISH
 
 
->>>>>>>> INSERT push_back
+>>>>>>>> INSERT push_back <value ...>
 push_back 1 2 3 4
 show
 push_back 1 2 3 4
