@@ -67,25 +67,25 @@ Significado das tags nas questões:
 ### Lista
 
 - [ ] `@lista_d1      *03 :make`[Lista Dupla com Nó Sentinela](https://github.com/qxcodeed/arcade/blob/master/base/lista_d1/Readme.md)
-- [ ] `@lista_d2      *04 :make`[Lista Dupla com Nó Iterador](https://github.com/qxcodeed/arcade/blob/master/base/lista_d2/Readme.md)
-- [ ] `@lista_d3      *05 :make`[Lista Dupla - Extra](https://github.com/qxcodeed/arcade/blob/master/base/lista_d3/Readme.md)
-- [ ] `@lista_d4      *05 :make`[Lista Circular utilizando Template](https://github.com/qxcodeed/arcade/blob/master/base/lista_d4/Readme.md)
-- [ ] `@prin_list1    *02 :leet`[Princesa com lista ligada](https://github.com/qxcodeed/arcade/blob/master/base/prin_list1/Readme.md)
+- [ ] `@lista_d2      *03 :make`[Lista Dupla com Nó Iterador](https://github.com/qxcodeed/arcade/blob/master/base/lista_d2/Readme.md)
+- [ ] `@lista_d3      +03 :make`[Lista Dupla - Extra](https://github.com/qxcodeed/arcade/blob/master/base/lista_d3/Readme.md)
+- [ ] `@lista_d4      *02 :make`[Lista Circular utilizando Template](https://github.com/qxcodeed/arcade/blob/master/base/lista_d4/Readme.md)
+- [ ] `@prin_list1    *03 :leet`[Princesa com lista ligada](https://github.com/qxcodeed/arcade/blob/master/base/prin_list1/Readme.md)
 - [ ] `@prin_list2    +02 :leet`[Princesa2 com lista ligada](https://github.com/qxcodeed/arcade/blob/master/base/prin_list2/Readme.md)
-- [ ] `@editor        *04 :leet`[Editor de texto](https://github.com/qxcodeed/arcade/blob/master/base/editor/Readme.md)
-- [ ] `@controlz      +03 :leet`[Editor com Control Z](https://github.com/qxcodeed/arcade/blob/master/base/controlz/Readme.md)
-- [ ] `@editorint     *08 :open`[Editor de texto interativo utilizando o curses](https://github.com/qxcodeed/arcade/blob/master/base/editorint/Readme.md)
+- [ ] `@editor        +04 :leet`[Editor de texto](https://github.com/qxcodeed/arcade/blob/master/base/editor/Readme.md)
+- [ ] `@controlz      +04 :leet`[Editor com Control Z](https://github.com/qxcodeed/arcade/blob/master/base/controlz/Readme.md)
+- [ ] `@editorint     *08 :open`[Editor de texto interativo](https://github.com/qxcodeed/arcade/blob/master/base/editorint/Readme.md)
+
+### Deque
+
+- [ ] `bufferring`    CRIAR ESSA ATIVIDADE
 
 ### Pilha
 
-- [ ] `@pilha_enc   *01 :make`[Construindo Pilha com Lista Encadeada - CPP](https://github.com/qxcodeed/arcade/blob/master/base/pilha_enc/Readme.md)
-- [ ] `@pilha_seq   *01 :make`[Construindo uma Pilha com Lista Sequencial CPP](https://github.com/qxcodeed/arcade/blob/master/base/pilha_seq/Readme.md)
-- [ ] `@pilha_dupla *01 :make`[Pilha Dupla - CPP](https://github.com/qxcodeed/arcade/blob/master/base/pilha_dupla/Readme.md)
 - [ ] `@queimando   *01 :leet`[Queimando árvores usando pilha](https://github.com/qxcodeed/arcade/blob/master/base/queimando/Readme.md)
 - [ ] `@pilhado     *01 :leet`[Fugindo do labirinto](https://github.com/qxcodeed/arcade/blob/master/base/pilhado/Readme.md)
-- [ ] `@polonesa    *01 :leet`[Transforme da notação padrão para polonesa reversa](https://github.com/qxcodeed/arcade/blob/master/base/polonesa/Readme.md)
-- [ ] `@mm_pilha    *01 :leet`[MinMax Pilha CPP](https://github.com/qxcodeed/arcade/blob/master/base/mm_pilha/Readme.md)
 - [ ] `@balanceada  *01 :leet`[Fórmula balanceada](https://github.com/qxcodeed/arcade/blob/master/base/balanceada/Readme.md)
+- [ ] `@polonesa    *01 :leet`[Transforme da notação padrão para polonesa reversa](https://github.com/qxcodeed/arcade/blob/master/base/polonesa/Readme.md)
 
 ### Fila
 

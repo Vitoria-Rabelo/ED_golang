@@ -1,60 +1,24 @@
-package main
 
-import (
-	"bufio"
-	"fmt"
-	"os"
-	"strings"
-)
-
-type Node[T comparable] struct {
-	Value T
-	next  *Node[T]
-	prev  *Node[T]
-	root  *Node[T]
-}
-
-type LList[T comparable] struct {
-	root *Node[T]
-	size int
-}
-
-func NewLList[T comparable]() *LList[T] {
-	root := &Node[T]{}
-	root.next = root
-	root.prev = root
-	root.root = root
-	return &LList[T]{root: root, size: 0}
-}
-
-func (n *Node[T]) Next() *Node[T] {
-	if n.next == n.root {
-		return n.root.next
+func toString(node * Node) string{
+	if node == nil {
+		return "[]"
 	}
-	return n.next
+	elementos := "["
+    current := node
+    first := true
+    
+    for current != nil {
+        if !first {
+            elementos += ", "
+        }
+        elementos += fmt.Sprint(current.value)
+        current = current.next
+        first = false
+    }
+    
+    elementos += "]"
+    return elementos
 }
-
-func (l *LList[T]) PushBack(value T) {
-	l.insertBefore(l.root, value)
-}
-
-func (l *LList[T]) insertBefore(mark *Node[T], value T) {
-	n := &Node[T]{Value: value, root: l.root}
-	n.prev = mark.prev
-	n.next = mark
-	mark.prev.next = n
-	mark.prev = n
-	l.size++
-}
-
-func (l *LList[T]) String() string {
-	values := []string{}
-	for n := l.root.next; n != l.root; n = n.next {
-		values = append(values, fmt.Sprint(n.Value))
-	}
-	return "[" + strings.Join(values, ", ") + "]"
-}
-
 
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
