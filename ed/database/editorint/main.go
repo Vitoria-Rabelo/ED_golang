@@ -29,24 +29,117 @@ func (e *Editor) KeyLeft() {
 		e.line = e.line.Prev()        // Move para a linha anterior
 		e.cursor = e.line.Value.End() // Move o cursor para o final da linha
 	}
+
+	if e.cursor == e.line.Value.Front(){
+		e.cursor = e.line.Value.End()
+	}
 }
 
 func (e *Editor) KeyEnter() {
+	if e.cursor == e.line.Value.End(){
+		e.lines.Insert( e.line.Next(), NewList[rune]())
+		e.line = e.line.Next()
+		e.cursor = e.line.Value.Front()
+		return
+	}
+	
+	newLine := NewList[rune]()
+
+	for c := e.cursor; c != e.line.Value.End(); {
+        next := c.Next() 
+        e.line.Value.Remove(c)
+    	newLine.PushBack(c.Value)
+        c = next
+    }
+
+	e.lines.Insert(e.line.Next(), newLine)
+	e.line = e.line.Next()   
+	e.cursor = e.line.Value.Front()
 }
 
 func (e *Editor) KeyRight() {
+	if e.cursor != e.line.Value.End(){
+		e.cursor = e.cursor.Next()
+		return
+	}
+
+	if  e.line != e.lines.Front(){
+		e.line = e.line.Next()
+		e.cursor = e.line.Value.Front()
+		return
+	}
+
+	if e.cursor == e.line.Value.End(){
+		e.cursor = e.line.Value.Front()
+	}
 }
 
 func (e *Editor) KeyUp() {
+	if e.line == e.lines.Front() {
+        return
+	}
+
+	posicaoCursor := e.line.Value.IndexOf(e.cursor)
+	linhaAnterior := e.line.Prev()
+ 	e.line = linhaAnterior
+	e.cursor = linhaAnterior.Value.Front()
+
+	for i := 0; i < posicaoCursor && e.cursor != linhaAnterior.Value.End(); i++ {
+        e.cursor = e.cursor.Next()
+    }
+
+	if posicaoCursor >= linhaAnterior.Value.Size() {
+        e.cursor = linhaAnterior.Value.Back()
+    }
 }
 
 func (e *Editor) KeyDown() {
+	 if e.line == e.lines.Back() {
+        return
+	}
+
+	posicaoCursor := e.line.Value.IndexOf(e.cursor)
+	linhaPosterior := e.line.Next()
+ 	e.line = linhaPosterior
+
+	e.cursor = linhaPosterior.Value.Front()
+	for i := 0; i < posicaoCursor && e.cursor != linhaPosterior.Value.End(); i++ {
+        e.cursor = e.cursor.Next()
+    }
+
+	if posicaoCursor >= linhaPosterior.Value.Size() {
+        e.cursor = linhaPosterior.Value.Back()
+    }
 }
 
 func (e *Editor) KeyBackspace() {
+	if e.cursor != e.line.Value.Front() {
+		e.line.Value.Remove(e.cursor.Prev())
+	}
+
+	linhaAnterior := e.line.Prev()
+    posicaoCursor := linhaAnterior.Value.Size()
+
+	for c := e.line.Value.Front(); c != e.line.Value.End(); {
+            proximoNode := c.Next()
+            linhaAnterior.Value.PushBack(c.Value)
+            e.line.Value.Remove(c)
+            c = proximoNode
+        }
+
+	e.lines.Remove(e.line)
+    e.line = linhaAnterior
+
+	e.cursor = linhaAnterior.Value.Front()
+    for i := 0; i < posicaoCursor && e.cursor != linhaAnterior.Value.End(); i++ {
+       e.cursor = e.cursor.Next()
+    }
 }
 
 func (e *Editor) KeyDelete() {
+	if e.cursor != e.line.Value.Back() {
+		e.line.Value.Remove(e.cursor.Next())
+	}
 }
 
 func main() {
