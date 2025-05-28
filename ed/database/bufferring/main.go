@@ -2,7 +2,6 @@ package main
 
 import (
 	"bufio"
-	"errors" // Adicionei esta importação
 	"fmt"
 	"os"
 	"strconv"
@@ -54,14 +53,14 @@ func (b *Deque) Len() int {
 
 func (b *Deque) Front() (int, error) {
 	if b.size == 0 {
-		return 0, errors.New("empty deque")
+		return 0, fmt.Errorf("fail: buffer vazio")
 	}
 	return b.data[b.front], nil
 }
 
 func (b *Deque) Back() (int, error) {
 	if b.size == 0 {
-		return 0, errors.New("empty deque")
+		return 0, fmt.Errorf("fail: buffer vazio")
 	}
 	return b.data[(b.front+b.size-1)%b.capacity], nil
 }
@@ -83,8 +82,9 @@ func (b *Deque) PushFront(value int) {
 	b.size++
 }
 
+func (b *Deque) PopFront() error { 
 	if b.size == 0 {
-		return errors.New("fail: buffer vazio")
+		return fmt.Errorf("fail: buffer vazio")
 	}
 	b.data[b.front] = 0
 	b.front = (b.front + 1) % b.capacity
@@ -94,7 +94,7 @@ func (b *Deque) PushFront(value int) {
 
 func (b *Deque) PopBack() error { 
 	if b.size == 0 {
-		return errors.New("fail: buffer vazio")
+		return fmt.Errorf("fail: buffer vazio")
 	}
 	b.data[(b.front+b.size-1)%b.capacity] = 0
 	b.size--
@@ -102,8 +102,8 @@ func (b *Deque) PopBack() error {
 }
 
 func (b *Deque) Clear() { 
-	b.front = 0
 	b.size = 0
+	b.front = 0
 }
 
 func (b *Deque) resize(newCapacity int) {
