@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 	"strings"
+	"strconv"
 )
 
 // func (q *Queue[T]) Enqueue(value T)
@@ -41,6 +42,45 @@ func (q *Queue[T]) String() string {
 	return result + "]"
 }
 
+func (q * Queue[T]) Enqueue(value T) {
+	newNode := &Node[T]{Value: value}
+
+	if q.tail == nil{
+		q.head = newNode
+		q.tail = newNode
+	}
+
+	q.tail.next = newNode
+	q.tail = newNode
+	q.size++
+} 
+
+func (q * Queue[T]) Dequeue() (T, bool){
+	var zero T
+	if q.head == nil{
+		return zero, false
+	}
+
+	value := q.head.Value
+	q.head = q.head.next
+
+	if q.head == nil{
+		q.tail = nil
+	}
+
+	q.size--
+	return value, true
+}
+
+func (q * Queue[T]) Peek() (T, bool){
+	var zero T
+	if q.head == nil{
+		return zero, false
+	}
+
+	return q.head.Value, true
+}
+
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
 	queue := NewQueue[int]()
@@ -61,20 +101,20 @@ func main() {
 		case "show":
 			fmt.Println(queue)
 		case "push":
-			// for _, arg := range args[1:] {
-			// 	value, _ := strconv.Atoi(arg)
-			// 	queue.Enqueue(value)
-			// }
+			for _, arg := range args[1:] {
+			 	value, _ := strconv.Atoi(arg)
+				queue.Enqueue(value)
+			 }
 		case "pop":
-			// if _, ok := queue.Dequeue(); !ok {
-			// 	fmt.Println("falha: fila vazia")
-			// }
+			 if _, ok := queue.Dequeue(); !ok {
+			 	fmt.Println("falha: fila vazia")
+			 }
 		case "peek":
-			// if value, ok := queue.Peek(); ok {
-			// 	fmt.Println(value)
-			// } else {
-			// 	fmt.Println("falha: fila vazia")
-			// }
+			 if value, ok := queue.Peek(); ok {
+			 	fmt.Println(value)
+			 } else {
+			 	fmt.Println("falha: fila vazia")
+			 }
 		default:
 			fmt.Println("Unknown command:", args[0])
 		}

@@ -77,6 +77,7 @@ func (b *Deque) PushFront(value int) {
 	if b.size == b.capacity {
 		b.resize(2 * b.capacity)
 	}
+
 	b.front = (b.front - 1 + b.capacity) % b.capacity
 	b.data[b.front] = value
 	b.size++
@@ -86,6 +87,7 @@ func (b *Deque) PopFront() error {
 	if b.size == 0 {
 		return fmt.Errorf("fail: buffer vazio")
 	}
+
 	b.data[b.front] = 0
 	b.front = (b.front + 1) % b.capacity
 	b.size--
@@ -96,21 +98,24 @@ func (b *Deque) PopBack() error {
 	if b.size == 0 {
 		return fmt.Errorf("fail: buffer vazio")
 	}
+
 	b.data[(b.front+b.size-1)%b.capacity] = 0
 	b.size--
 	return nil
 }
 
 func (b *Deque) Clear() { 
-	b.size = 0
 	b.front = 0
+	b.size = 0
 }
 
 func (b *Deque) resize(newCapacity int) {
 	newData := make([]int, newCapacity)
-	for i := 0; i < b.size; i++ {
+
+	for i := 0; i < b.size; i++{
 		newData[i] = b.data[(b.front+i)%b.capacity]
 	}
+	
 	b.data = newData
 	b.front = 0
 	b.capacity = newCapacity
