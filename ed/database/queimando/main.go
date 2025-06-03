@@ -23,10 +23,11 @@ func getNeib(p Pos) []Pos {
 
 // Verifica se a posição está dentro da matriz
 func inside(mat [][]rune, p Pos) bool {
-	return false
-	/* Essa função retorna uma booleana que
-	   diz se a posição p está dentro da
-	   matriz mat */
+	if p.l < 0 || p.c < 0 || p.l >= len(mat) || p.c >= len(mat[0]){
+		return false
+	}
+	return true
+
 }
 
 // Função para propagar a "chama" (substitui '#' por 'o')

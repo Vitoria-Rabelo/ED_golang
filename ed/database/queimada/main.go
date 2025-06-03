@@ -6,26 +6,7 @@ import (
 	"os"
 )
 
-func tocarFogo(mat [][]rune, l, c int) {
-	nl := len(mat)
-	nc := len(mat[0])
 
-	if l >= nl || c >= nc || l < 0 || c < 0{
-		return
-	} 
-
-	if mat[l][c] != '#' {
-		return
-	}
-
-	mat[l][c] = 'o'
-
-	tocarFogo(mat, l-1, c)
-	tocarFogo(mat,l , c-1)
-	tocarFogo(mat, l+1, c)
-	tocarFogo(mat,l , c+1)
-	
-}
 
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
