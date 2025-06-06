@@ -1,0 +1,8 @@
+{
+    "patches": [
+        {
+            "label": "2025-06-05_21-11-00",
+            "content": "package main\n\nimport (\n\t\"container/list\"\n\t\"fmt\"\n)\n\n// mostra a lista com o elemento sword destacado\nfunc ToStr(l *list.List, sword *list.Element) string {\n\telem := \"[\"\n\tfor i := l.Front(); i != nil; i = i.Next() {\n\t\tif i == sword {\n\t\t\tif i.Value.(int) > 0 {\n\t\t\t\telem += fmt.Sprintf(\" %d>\",i.Value.(int))\n\t\t\t} else {\n\t\t\t\telem += fmt.Sprintf(\" <%d\", i.Value.(int))\n\t\t\t}\n\t\t} else {\n\t\t\telem +=fmt.Sprintf(\" %d\",i.Value.(int))\n\t\t}\n\t}\n\telem += \" ]\"\n\treturn elem\n}\n\n// move para frente na lista circular\nfunc Next(l *list.List, it *list.Element) *list.Element {\n\tif it.Next() == nil{\n\t\treturn l.Front()\n\t}\n\treturn it.Next()\n}\n\n// move para tras na lista circular\nfunc Prev(l *list.List, it *list.Element) *list.Element {\n\tif it.Prev() == nil{\n\t\treturn l.Back()\n\t}\n\treturn it.Prev()\n}\n\nfunc main() {\n\tvar qtd, chosen, fase int\n\tfmt.Scan(&qtd, &chosen, &fase)\n\tl := list.New()\n\tfor i := 1; i <= qtd; i++ {\n\t\tl.PushBack(i * fase)\n\t\tfase = -fase\n\t}\n\tsword := l.Front()\n\tfor i := 0; i < chosen-1; i++ {\n\t\tsword = Next(l, sword)\n\t}\n\tfor l.Len() > 1 {\n\t\tfmt.Println(ToStr(l, sword))\n\t\tif sword.Value.(int) > 0 {\n\t\t\ttoRemove := Next(l, sword)\n\t\t\tl.Remove(toRemove)\n\t\t\tsword = Next(l, sword)\n\t\t} else {\n\t\t\ttoRemove := Prev(l, sword)\n\t\t\tl.Remove(toRemove)\n\t\t\tsword = Prev(l, sword)\n\t\t}\n\t}\n\tfmt.Println(ToStr(l, sword))\n}\n"
+        }
+    ]
+}

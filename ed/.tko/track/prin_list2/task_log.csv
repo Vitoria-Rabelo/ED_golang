@@ -1,0 +1,5 @@
+time:2025-06-05 21:10:45, type:DOWN, key:prin_list2
+time:2025-06-05 21:10:58, type:PICK, key:prin_list2, e:0
+time:2025-06-05 21:11:00, type:TEST, key:prin_list2, c:100, e:0
+time:2025-06-05 21:11:00, type:SIZE, key:prin_list2, e:0, att:1, lines:67
+time:2025-06-05 21:11:01, type:BACK, key:prin_list2, e:0, att:1, lines:67
