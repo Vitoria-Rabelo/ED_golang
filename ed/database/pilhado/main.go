@@ -14,15 +14,67 @@ type Pos struct {
 }
 
 func (p Pos) pegarVizinhos() []Pos {
-	// Retorna as posições vizinhas (cima, baixo, esquerda, direita)
-	return nil
+ // Retorna as posições vizinhas (cima, baixo, esquerda, direita)
+	return []Pos{
+		{p.l - 1, p.c},
+		{p.l + 1, p.c},
+		{p.l, p.c - 1},
+		{p.l, p.c + 1},
+	}
 }
 
 // procurarSaida é uma função placeholder. Você precisará implementar a lógica
 // equivalente à sua função procurar_saida em C++.
 // Assumimos que ela modifica a matriz in-place.
 func procurarSaida(mat [][]rune, inicio Pos, fim Pos) {
-	_, _, _ = mat, inicio, fim
+	caminho := NewStack[Pos](len(mat) * len(mat[0]))
+	caminho.Push(inicio)
+	beco := NewStack[Pos](len(mat) * len(mat[0]))
+	visitados := make([][]bool, len(mat))
+	for i := range visitados {
+		visitados[i] = make([]bool, len(mat[0]))
+	}
+
+	for !caminho.IsEmpty(){
+		atual, err := caminho.Top()
+		
+		if err != nil {
+			break
+		}
+
+		visitados[atual.l][atual.c] = true
+
+		if atual == fim{
+			break
+		}
+		var validos []Pos
+
+		for _, v := range atual.pegarVizinhos() {
+			if v.l >= 0 && v.l < len(mat) && v.c >= 0 && v.c < len(mat[0]) {
+				if (mat[v.l][v.c] == ' ' || mat[v.l][v.c] == 'F') && !visitados[v.l][v.c] {
+					validos = append(validos, v)
+				}
+			}
+		}
+			if len(validos) > 0{
+				caminho.Push(validos[0])
+			} else {
+				beco.Push(atual)
+				caminho.Pop()
+			}
+		
+		for _, pos := range caminho.data {
+			mat[pos.l][pos.c] = '.'
+		}
+		
+		for _, pos := range beco.data {
+			if mat[pos.l][pos.c] == '.' {
+				mat[pos.l][pos.c] = ' '
+			}
+		}
+
+	}
+
 }
 
 func main() {
