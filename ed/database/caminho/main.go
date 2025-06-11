@@ -11,13 +11,51 @@ type Pos struct {
 }
 
 func (p Pos) pegarVizinhos() []Pos {
-	return nil
+	return []Pos{
+		{p.l - 1, p.c},
+		{p.l + 1, p.c},
+		{p.l, p.c - 1},
+		{p.l, p.c + 1},
+	}
 }
 
 func procurarSaida(mat [][]rune, inicio Pos, fim Pos) {
-	_, _, _ = mat, inicio, fim
-}
+	fila := NewQueue[Pos]()
+    fila.Enqueue(inicio)
 
+	visitados := make(map[Pos]bool)
+	visitados[inicio] =true
+	antes := make(map[Pos]Pos)
+
+	for !fila.IsEmpty() {
+		atual, ok := fila.Dequeue()
+		if !ok {
+			break
+		}
+		if atual == fim {
+			break
+		}
+
+		for _, v := range atual.pegarVizinhos() {
+			if v.l >= 0 && v.l < len(mat) && v.c >= 0 && v.c < len(mat[0]) {
+				if (mat[v.l][v.c] == ' ' || mat[v.l][v.c] == 'F') && !visitados[v] {
+					visitados[v] = true
+					antes[v] = atual
+          
+					fila.Enqueue(v)   
+				}
+			}
+		}
+
+	}
+
+	if _, encontrado := visitados[fim]; encontrado {
+		for atual := fim; atual != inicio; atual = antes[atual]{
+			mat[atual.l][atual.c] = '.'
+		}
+		mat[inicio.l][inicio.c] = '.'}
+}
+			
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
 
