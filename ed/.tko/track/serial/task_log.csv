@@ -1,1 +1,12 @@
 time:2025-06-03 20:22:33, type:DOWN, key:serial
+time:2025-06-12 18:59:30, type:PICK, key:serial
+time:2025-06-12 18:59:31, type:BACK, key:serial, e:0
+time:2025-06-12 18:59:44, type:PICK, key:serial, e:0
+time:2025-06-12 18:59:45, type:TEST, key:serial, c:0, e:0
+time:2025-06-12 18:59:45, type:SIZE, key:serial, e:0, att:1, lines:33
+time:2025-06-12 18:59:47, type:BACK, key:serial, e:0, att:1, lines:33
+time:2025-06-12 22:28:48, type:PICK, key:serial, e:0, att:1, lines:33
+time:2025-06-12 22:28:49, type:TEST, key:serial, c:100, e:0, att:1, lines:33
+time:2025-06-12 22:28:50, type:SIZE, key:serial, e:0, att:2, lines:82
+time:2025-06-12 22:28:50, type:TEST, key:serial, c:100, e:0, att:2, lines:82
+time:2025-06-12 22:28:51, type:BACK, key:serial, e:0, att:2, lines:82

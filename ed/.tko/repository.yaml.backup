@@ -6,13 +6,14 @@ expanded:
 - recursao
 - recursão-desafios-
 - main-quest
-- lista
+- árvore
 tasks:
   especiais: '{cov:100, appr:0, auto:0, desc:0, desire:0, effort:0, idx:0}'
   triangulo: '{cov:100, appr:0, auto:0, desc:0, desire:0, effort:0, idx:0}'
   treinando: '{cov:100, appr:0, auto:0, desc:0, desire:0, effort:0, idx:0}'
   multiset: '{cov:100, appr:0, auto:0, desc:0, desire:0, effort:0, idx:0}'
   lista_d1: '{cov:100, appr:0, auto:0, desc:0, desire:0, effort:0, idx:0}'
+  prin_list2: '{cov:100, appr:0, auto:0, desc:0, desire:0, effort:0, idx:0}'
 flags:
   minimum: 0
   percent: 0
@@ -21,4 +22,4 @@ flags:
   graph: 0
 new_items: []
 lang: go
-index: prin_list2
+index: serial
