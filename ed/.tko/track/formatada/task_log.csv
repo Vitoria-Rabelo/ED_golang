@@ -1,0 +1,5 @@
+time:2025-06-13 22:55:14, type:DOWN, key:formatada
+time:2025-06-13 22:55:21, type:PICK, key:formatada, e:0
+time:2025-06-13 22:55:22, type:TEST, key:formatada, c:0, e:0
+time:2025-06-13 22:55:22, type:SIZE, key:formatada, e:0, att:1, lines:5
+time:2025-06-13 22:55:24, type:BACK, key:formatada, e:0, att:1, lines:5

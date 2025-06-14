@@ -10,3 +10,6 @@ time:2025-06-12 22:28:49, type:TEST, key:serial, c:100, e:0, att:1, lines:33
 time:2025-06-12 22:28:50, type:SIZE, key:serial, e:0, att:2, lines:82
 time:2025-06-12 22:28:50, type:TEST, key:serial, c:100, e:0, att:2, lines:82
 time:2025-06-12 22:28:51, type:BACK, key:serial, e:0, att:2, lines:82
+time:2025-06-13 22:55:15, type:PICK, key:serial, e:0, att:2, lines:82
+time:2025-06-13 22:55:17, type:TEST, key:serial, c:100, e:0, att:2, lines:82
+time:2025-06-13 22:55:19, type:BACK, key:serial, e:0, att:2, lines:82
