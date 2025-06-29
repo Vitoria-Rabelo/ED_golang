@@ -1,0 +1,8 @@
+2025-06-29 11:32:03, MOVE, v:1, k:formatada, mode:PICK
+2025-06-29 11:32:05, EXEC, v:1, k:formatada, mode:FULL, rate:100, size:99
+2025-06-29 11:32:05, EXEC, v:1, k:formatada, mode:FULL, rate:100, size:99
+2025-06-29 11:32:07, MOVE, v:1, k:formatada, mode:BACK
+2025-06-29 11:32:44, MOVE, v:1, k:soma, mode:DOWN
+2025-06-29 11:32:45, MOVE, v:1, k:soma, mode:PICK
+2025-06-29 11:32:47, EXEC, v:1, k:soma, mode:FULL, rate:0, size:5
+2025-06-29 11:32:49, MOVE, v:1, k:soma, mode:BACK
