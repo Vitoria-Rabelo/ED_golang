@@ -14,3 +14,10 @@
 2025-06-29 12:15:49, EXEC, v:1, k:formatada, mode:FULL, rate:100, size:102
 2025-06-29 12:15:49, MOVE, v:1, k:formatada, mode:BACK
 2025-06-29 12:29:55, MOVE, v:1, k:altura, mode:DOWN
+2025-06-29 19:19:25, MOVE, v:1, k:altura, mode:PICK
+2025-06-29 19:19:26, EXEC, v:1, k:altura, mode:FULL, rate:100, size:139
+2025-06-29 19:19:28, MOVE, v:1, k:altura, mode:BACK
+2025-06-29 19:19:30, MOVE, v:1, k:arvore-path, mode:DOWN
+2025-06-29 19:19:31, MOVE, v:1, k:arvore-path, mode:PICK
+2025-06-29 19:19:32, EXEC, v:1, k:arvore-path, mode:FULL, rate:0, size:5
+2025-06-29 19:19:32, MOVE, v:1, k:arvore-path, mode:BACK

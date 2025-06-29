@@ -6,8 +6,10 @@ expanded:
 - recursao
 - recursão-desafios-
 - main-quest
+- árvore
 tasks:
   formatada: '{rate:100}'
+  altura: '{rate:100}'
 flags:
   minimum: 0
   percent: 0
@@ -15,4 +17,4 @@ flags:
   skills: 0
   graph: 0
 lang: go
-index: árvore
+index: arvore-path
