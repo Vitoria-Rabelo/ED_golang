@@ -6,7 +6,6 @@ expanded:
 - recursao
 - recursão-desafios-
 - main-quest
-- árvore
 tasks:
   formatada: '{rate:100}'
 flags:
@@ -16,4 +15,4 @@ flags:
   skills: 0
   graph: 0
 lang: go
-index: formatada
+index: árvore

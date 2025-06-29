@@ -13,3 +13,4 @@
 2025-06-29 12:15:15, EXEC, v:1, k:formatada, mode:FULL, rate:0, size:71
 2025-06-29 12:15:49, EXEC, v:1, k:formatada, mode:FULL, rate:100, size:102
 2025-06-29 12:15:49, MOVE, v:1, k:formatada, mode:BACK
+2025-06-29 12:29:55, MOVE, v:1, k:altura, mode:DOWN
