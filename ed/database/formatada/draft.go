@@ -8,92 +8,95 @@ import (
 	"strings"
 )
 
-type Node struct {
+type Node struct{
 	Value int
-	Left  *Node
+	Left *Node
 	Right *Node
 }
 
-func NewNode(value int) *Node {
+type Tree struct{
+	Root *Node
+}
+
+func NewNode(value int) *Node{
 	return &Node{
 		Value: value,
-		Left:  nil,
+		Left: nil,
 		Right: nil,
 	}
 }
 
-type BTree struct {
-	Root *Node
-}
-
-func NewBTree() *BTree {
-	return &BTree{
+func NewTree() *Tree{
+	return &Tree{
 		Root: nil,
 	}
 }
 
-func (bt *BTree) Deserialize(serial string) {
+func (tree *Tree) Deserialize(serial string) {
 	scanner := bufio.NewScanner(strings.NewReader(serial))
 	scanner.Split(bufio.ScanWords)
-	bt.Root = deserialize(scanner)
+	tree.Root = deserialize(scanner)
 }
 
-func deserialize(scanner *bufio.Scanner) *Node {
+func deserialize(scanner *bufio.Scanner) *Node{
 	if !scanner.Scan() {
 		return nil
 	}
+
 	token := scanner.Text()
 	if token == "#" {
 		return nil
 	}
-	value, err := strconv.Atoi(token)
-	if err != nil {
+	value, error := strconv.Atoi(token)
+	if error != nil {
 		return nil
 	}
-	node := NewNode(value)
-	node.Left = deserialize(scanner)
-	node.Right = deserialize(scanner)
-	return node
+	n := NewNode(value)
+	n.Left = deserialize(scanner)
+	n.Right = deserialize(scanner)
+	return n
+
 }
 
-func (bt *BTree) PrintInOrderWithIndent() {
-	printInOrderWithNulls(bt.Root, 0)
+func (tree * Tree) Show(){
+	show(tree.Root, 0)
 }
 
-func printInOrderWithNulls(node *Node, depth int) {
-	if node == nil {
+func show(node * Node, d int){
+	if node == nil{
 		return
 	}
-	if node.Left != nil {
-		printInOrderWithNulls(node.Left, depth+1)
-	} else if node.Right != nil {
-	
-		for i := 0; i < depth+1; i++ {
+
+	if node.Left != nil{
+		show(node.Left, d + 1)
+	} else if node.Right != nil{
+		for i := 0; i < d + 1; i++{
 			fmt.Print("....")
 		}
 		fmt.Println("#")
 	}
-	
-	for i := 0; i < depth; i++ {
+
+	for i := 0; i < d ; i++ {
 		fmt.Print("....")
 	}
 	fmt.Println(node.Value)
     	if node.Right != nil {
-		printInOrderWithNulls(node.Right, depth+1)
-	} else if node.Left != nil {
-		for i := 0; i < depth+1; i++ {
-			fmt.Print("....")
+			show(node.Right, d + 1)
+		}else if node.Left != nil {
+			for i := 0; i < d+1; i++ {
+				fmt.Print("....")
+			}
+			fmt.Println("#")
 		}
-		fmt.Println("#")
-	}
+
 }
 
-func main() {
+func main(){
 	scanner := bufio.NewScanner(os.Stdin)
 	scanner.Scan()
-	line := scanner.Text()
+	input := scanner.Text()
 
-	bt := NewBTree()
-	bt.Deserialize(line)
-	bt.PrintInOrderWithIndent()
+	tree := NewTree()
+	tree.Deserialize(input)
+	tree.Show()
 }

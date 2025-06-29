@@ -6,3 +6,10 @@
 2025-06-29 11:32:45, MOVE, v:1, k:soma, mode:PICK
 2025-06-29 11:32:47, EXEC, v:1, k:soma, mode:FULL, rate:0, size:5
 2025-06-29 11:32:49, MOVE, v:1, k:soma, mode:BACK
+2025-06-29 12:14:01, MOVE, v:1, k:soma, mode:PICK
+2025-06-29 12:14:02, EXEC, v:1, k:soma, mode:FULL, rate:0
+2025-06-29 12:15:12, MOVE, v:1, k:soma, mode:BACK
+2025-06-29 12:15:14, MOVE, v:1, k:formatada, mode:PICK
+2025-06-29 12:15:15, EXEC, v:1, k:formatada, mode:FULL, rate:0, size:71
+2025-06-29 12:15:49, EXEC, v:1, k:formatada, mode:FULL, rate:100, size:102
+2025-06-29 12:15:49, MOVE, v:1, k:formatada, mode:BACK
