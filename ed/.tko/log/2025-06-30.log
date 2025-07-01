@@ -1,0 +1,4 @@
+2025-06-30 21:25:22, MOVE, v:1, k:dividido, mode:DOWN
+2025-06-30 21:25:22, MOVE, v:1, k:dividido, mode:PICK
+2025-06-30 21:25:24, EXEC, v:1, k:dividido, mode:FULL, rate:0, size:5
+2025-06-30 21:25:27, MOVE, v:1, k:dividido, mode:BACK
