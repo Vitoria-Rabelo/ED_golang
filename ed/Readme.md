@@ -77,9 +77,9 @@ Significado das tags nas questões:
 - [ ] `@pilhado      *03 :leet`[Pilha: Fugindo do labirinto](https://github.com/qxcodeed/arcade/blob/master/base/pilhado/Readme.md)
 - [ ] `@distancia    +05 :leet`[Colocando os números no lugar certo](https://github.com/qxcodeed/arcade/blob/master/base/distancia/Readme.md)
 - [ ] `@sudoku       +10 :leet`[Sudoku](https://github.com/qxcodeed/arcade/blob/master/base/sudoku/Readme.md)
-- [ ] `@subset_sum   retrocesso +05  :leet`[Soma subconjuntos](https://github.com/qxcodeed/arcade/blob/master/base/subset_sum/Readme.md)
-- [ ] `@n_rainhas  retrocesso +05  :leet`[N-Rainhas](https://github.com/qxcodeed/arcade/blob/master/base/n_rainhas/Readme.md)
-- [ ] `@permutacoes retrocesso +05 :leet`[Permutando coisas](https://github.com/qxcodeed/arcade/blob/master/base/permutacoes/Readme.md)
+- [ ] `@subset_sum   +05 :leet`[Soma subconjuntos](https://github.com/qxcodeed/arcade/blob/master/base/subset_sum/Readme.md)
+- [ ] `@n_rainhas    +05 :leet`[N-Rainhas](https://github.com/qxcodeed/arcade/blob/master/base/n_rainhas/Readme.md)
+- [ ] `@permutacoes  +05 :leet`[Permutando coisas](https://github.com/qxcodeed/arcade/blob/master/base/permutacoes/Readme.md)
 
 ### Vetor
 
