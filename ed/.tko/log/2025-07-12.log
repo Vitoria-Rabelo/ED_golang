@@ -23,3 +23,6 @@
 2025-07-12 18:55:26, MOVE, v:1, k:distancia, mode:PICK
 2025-07-12 18:55:27, EXEC, v:1, k:distancia, mode:FULL, rate:0
 2025-07-12 19:44:27, MOVE, v:1, k:distancia, mode:BACK
+2025-07-12 19:49:06, MOVE, v:1, k:permutacoes, mode:DOWN
+2025-07-12 19:49:06, MOVE, v:1, k:permutacoes, mode:PICK
+2025-07-12 19:49:07, MOVE, v:1, k:permutacoes, mode:BACK
