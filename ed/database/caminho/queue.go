@@ -6,13 +6,13 @@ import (
 
 // Implmentação de uma fila genérica usando a lista duplamente encadeada do pacote container/list
 type Queue[T any] struct {
-	queue list.List
+  queue *list.List
 }
 
 func NewQueue[T any]() *Queue[T] {
-	return &Queue[T]{
-		queue: *list.New(),
-	}
+  return &Queue[T]{
+    queue: list.New(),
+  }
 }
 func (q *Queue[T]) Enqueue(value T) {
 	q.queue.PushBack(value)

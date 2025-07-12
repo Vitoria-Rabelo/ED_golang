@@ -2,3 +2,11 @@
 2025-07-12 17:10:31, MOVE, v:1, k:subset_sum, mode:PICK
 2025-07-12 17:10:34, EXEC, v:1, k:subset_sum, mode:FULL, rate:0, size:18
 2025-07-12 17:10:34, MOVE, v:1, k:subset_sum, mode:BACK
+2025-07-12 18:16:26, MOVE, v:1, k:caminho, mode:PICK
+2025-07-12 18:16:27, EXEC, v:1, k:caminho, mode:FULL, rate:0, size:137
+2025-07-12 18:17:10, EXEC, v:1, k:caminho, mode:FULL, rate:0, size:233
+2025-07-12 18:17:11, EXEC, v:1, k:caminho, mode:FULL, rate:0, size:233
+2025-07-12 18:17:56, EXEC, v:1, k:caminho, mode:FULL, rate:0, size:137
+2025-07-12 18:17:58, EXEC, v:1, k:caminho, mode:FULL, rate:0
+2025-07-12 18:18:15, EXEC, v:1, k:caminho, mode:FULL, rate:100, size:137
+2025-07-12 18:18:16, MOVE, v:1, k:caminho, mode:BACK

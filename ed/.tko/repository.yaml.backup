@@ -8,6 +8,7 @@ expanded:
 - main-quest
 - algoritmo-de-retrocesso---backtracking
 - backtracking
+- busca-em-largura---bfs
 tasks:
   formatada: '{rate:100}'
   altura: '{rate:100}'
@@ -18,4 +19,4 @@ flags:
   skills: 0
   graph: 0
 lang: go
-index: subset_sum
+index: caminho
