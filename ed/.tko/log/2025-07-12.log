@@ -14,3 +14,12 @@
 2025-07-12 18:19:25, MOVE, v:1, k:wordsearch, mode:PICK
 2025-07-12 18:19:27, EXEC, v:1, k:wordsearch, mode:FULL, rate:12, size:62
 2025-07-12 18:19:28, MOVE, v:1, k:wordsearch, mode:BACK
+2025-07-12 18:52:46, MOVE, v:1, k:wordsearch, mode:PICK
+2025-07-12 18:52:47, EXEC, v:1, k:wordsearch, mode:FULL, rate:12
+2025-07-12 18:53:21, MOVE, v:1, k:wordsearch, mode:BACK
+2025-07-12 18:53:24, MOVE, v:1, k:distancia, mode:PICK
+2025-07-12 18:53:26, EXEC, v:1, k:distancia, mode:FULL, rate:0
+2025-07-12 18:53:27, MOVE, v:1, k:distancia, mode:BACK
+2025-07-12 18:55:26, MOVE, v:1, k:distancia, mode:PICK
+2025-07-12 18:55:27, EXEC, v:1, k:distancia, mode:FULL, rate:0
+2025-07-12 19:44:27, MOVE, v:1, k:distancia, mode:BACK

@@ -10,6 +10,7 @@ expanded:
 - backtracking
 tasks:
   caminho: '{rate:100}'
+  wordsearch: '{rate:12}'
   formatada: '{rate:100}'
   altura: '{rate:100}'
 flags:
@@ -19,4 +20,4 @@ flags:
   skills: 0
   graph: 0
 lang: go
-index: wordsearch
+index: distancia
