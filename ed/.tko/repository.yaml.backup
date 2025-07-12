@@ -6,7 +6,8 @@ expanded:
 - recursao
 - recursão-desafios-
 - main-quest
-- árvore
+- algoritmo-de-retrocesso---backtracking
+- backtracking
 tasks:
   formatada: '{rate:100}'
   altura: '{rate:100}'
@@ -17,4 +18,4 @@ flags:
   skills: 0
   graph: 0
 lang: go
-index: arvore
+index: subset_sum

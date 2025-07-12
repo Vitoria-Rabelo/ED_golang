@@ -1,0 +1,4 @@
+2025-07-12 17:10:31, MOVE, v:1, k:subset_sum, mode:DOWN
+2025-07-12 17:10:31, MOVE, v:1, k:subset_sum, mode:PICK
+2025-07-12 17:10:34, EXEC, v:1, k:subset_sum, mode:FULL, rate:0, size:18
+2025-07-12 17:10:34, MOVE, v:1, k:subset_sum, mode:BACK

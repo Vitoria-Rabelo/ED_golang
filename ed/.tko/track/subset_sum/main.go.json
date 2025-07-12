@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2025-07-12_17-10-34",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc backtracking(vet []int, index, soma, alvo int) bool {\n\t_, _, _, _ = vet, index, soma, alvo\n\treturn false\n}\n\nfunc main() {\n\tvar qtd, soma int\n\tfmt.Scan(&qtd, &soma)\n\tvet := make([]int, qtd)\n\tfor i := range qtd {\n\t\tfmt.Scan(&vet[i])\n\t}\n\tfmt.Println(vet)\n}\n",
+            "lines": "18"
+        }
+    ]
+}
