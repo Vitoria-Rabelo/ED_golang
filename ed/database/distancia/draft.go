@@ -2,21 +2,21 @@ package main
 
 import "fmt"
 
-func max(a, b int) int {
+func max(a, b int) int{
     if a > b {
         return a
     }
     return b
 }
 
-func min(a, b int) int {
+func min(a, b int)int{
     if a < b {
         return a
     }
     return b
 }
 
-func podeColocar(seq []byte, pos int, d byte, L int) bool {
+func backtracking(seq []byte, pos int, d byte, L int) bool {
     for r := max(0, pos-L); r < pos; r++ {
         if seq[r] == d {
             return false
@@ -30,12 +30,12 @@ func podeColocar(seq []byte, pos int, d byte, L int) bool {
     return true
 }
 
-func distancia(seq []byte, L int) bool {
+func distancia(seq []byte, L int) bool{
     for i := 0; i < len(seq); i++ {
         if seq[i] == '.' {
             for j := 0; j <= L; j++ {
                 d := byte(j + '0')
-                if podeColocar(seq, i, d, L) {
+                if backtracking(seq, i, d, L) {
                     seq[i] = d
                     if distancia(seq, L) {
                         return true
