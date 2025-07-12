@@ -8,8 +8,8 @@ expanded:
 - main-quest
 - algoritmo-de-retrocesso---backtracking
 - backtracking
-- busca-em-largura---bfs
 tasks:
+  caminho: '{rate:100}'
   formatada: '{rate:100}'
   altura: '{rate:100}'
 flags:
@@ -19,4 +19,4 @@ flags:
   skills: 0
   graph: 0
 lang: go
-index: caminho
+index: wordsearch
