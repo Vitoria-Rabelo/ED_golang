@@ -2,35 +2,34 @@ package main
 import "fmt"
 
 func main() {
-    var tam int
-    fmt.Scan(&tam)
+   var n int
+   fmt.Scan(&n)
 
-    slice := make([]int, tam)
+   vet := make([]int, n)
 
-    for i := range tam{
-        fmt.Scan(&slice[i])
-    }
+   for i := range n{
+      fmt.Scan(&vet[i])
+   }
 
-    fmt.Println(slice)
 
-    var sai int
-    fmt.Scan(&sai)
 
-    slice_sair := make(map[int]struct{})
+   var sair int
 
-    for range sai{
-        var elemento int
+   fmt.Scan(&sair)
+
+   vet_sair := make(map[int]struct{})
+
+   for range sair{
+      var elemento int
         fmt.Scan(&elemento)
-        slice_sair[elemento] = struct{}{}
-    }
-    fmt.Println(slice_sair)
+        vet_sair[elemento] = struct{}{}
+   }
 
-    imprime := make([]int, 0, tam)
-    for _, elem := range slice{
-        _, esta := slice_sair[elem]
-        if !esta{
-            imprime = append(imprime, elem)
+   for _, elem := range vet {
+        if _, existe := vet_sair[elem]; !existe {
+            fmt.Print(elem, " ")
         }
     }
-    fmt.Println(slice)
+    fmt.Println()
 }
+
