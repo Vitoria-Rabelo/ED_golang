@@ -71,14 +71,28 @@ func frozen (p *Pen, tam float64){
 
 }
 
+func trianguloInvertido(p *Pen, tam float64) {
+	if  tam < 10{
+		return
+	}
+	for range 3{
+	p.Walk(tam)
+	p.Rotate(-120)
+	trianguloInvertido(p, tam / 2)
+	}
+}
+
+
+
 func main() {
 	pen := NewPen(500, 500)
-	pen.SetPosition(250, 250)
-	pen.SetHeading(90)
+	pen.SetPosition(20, 20)
+	pen.SetHeading(0)
 	//embua(pen, 460)
 	//tree(pen, 100)
 	//circle(pen, 180)
-	frozen(pen, 180)
+	//frozen(pen, 180)
+	trianguloInvertido(pen, 460)
 	pen.SaveToFile("tree.svg")
 	fmt.Println("SVG file created successfully.")
 }
