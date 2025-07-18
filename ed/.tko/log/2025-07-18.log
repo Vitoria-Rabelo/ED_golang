@@ -17,3 +17,6 @@
 2025-07-18 13:46:08, MOVE, v:1, k:bst_serial, mode:PICK
 2025-07-18 13:46:09, MOVE, v:1, k:bst_serial, mode:BACK
 2025-07-18 17:03:05, MOVE, v:1, k:bst_remove, mode:DOWN
+2025-07-18 17:04:12, MOVE, v:1, k:bst_remove, mode:PICK
+2025-07-18 17:04:14, EXEC, v:1, k:bst_remove, mode:FULL, rate:0, size:79
+2025-07-18 17:04:15, MOVE, v:1, k:bst_remove, mode:BACK
