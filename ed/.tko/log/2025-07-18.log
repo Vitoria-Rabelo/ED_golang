@@ -1,2 +1,13 @@
 2025-07-18 13:01:11, MOVE, v:1, k:inverter, mode:DOWN
 2025-07-18 13:01:13, MOVE, v:1, k:clonar, mode:DOWN
+2025-07-18 13:17:31, MOVE, v:1, k:compare, mode:DOWN
+2025-07-18 13:17:31, MOVE, v:1, k:compare, mode:PICK
+2025-07-18 13:17:34, EXEC, v:1, k:compare, mode:FULL, rate:100, size:101
+2025-07-18 13:17:42, MOVE, v:1, k:compare, mode:BACK
+2025-07-18 13:20:39, MOVE, v:1, k:chaves, mode:PICK
+2025-07-18 13:20:41, EXEC, v:1, k:chaves, mode:FULL, rate:100, size:65
+2025-07-18 13:20:41, MOVE, v:1, k:chaves, mode:BACK
+2025-07-18 13:31:44, MOVE, v:1, k:bst_insert, mode:DOWN
+2025-07-18 13:31:45, MOVE, v:1, k:bst_insert, mode:PICK
+2025-07-18 13:31:47, EXEC, v:1, k:bst_insert, mode:FULL, rate:0, size:65
+2025-07-18 13:31:48, MOVE, v:1, k:bst_insert, mode:BACK

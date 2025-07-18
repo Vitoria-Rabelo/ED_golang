@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2025-07-18_13-20-41",
+            "content": "package main\nimport \"fmt\"\n\n type Node struct{\n    time string\n    next *Node\n}\n\ntype Queue struct{\n        head *Node\n        tail *Node\n    }\n\nfunc (q *Queue) Enqueue(time string) {\n    newNode := &Node{\n        time: time,\n        next: nil,\n    }\n\n    if q.tail == nil {\n        q.head = newNode\n        q.tail = newNode\n    }\n    q.tail.next = newNode\n\tq.tail = newNode\n}\n\nfunc (q *Queue) Dequeue() string{\n    if q.head == nil{\n        return \"\"\n    }\n\n    team := q.head.time\n    q.head = q.head.next\n\n    if q.head == nil{\n        q.tail = nil\n    }\n    return team\n}\n\nfunc main() {\n    queue := Queue{}\n\n\tfor _, time := range []string{\"A\", \"B\", \"C\", \"D\", \"E\", \"F\", \"G\", \"H\", \"I\", \"J\", \"K\", \"L\", \"M\", \"N\", \"O\", \"P\"} {\n\t\tqueue.Enqueue(time)\n\t}\n\n    for i := 0; i < 15; i++ {\n\t\tvar m, n int\n\t\tfmt.Scan(&m, &n)\n\n        t1 := queue.Dequeue()\n\t\tt2 := queue.Dequeue()\n\n        if m > n {\n\t\t\tqueue.Enqueue(t1)\n\t\t} else {\n\t\t\tqueue.Enqueue(t2)\n\t\t}\n    }\n\n    fmt.Println(queue.Dequeue())\n\n}",
+            "lines": "65"
+        }
+    ]
+}

@@ -9,12 +9,14 @@ tasks:
   wordsearch: '{rate:12}'
   distancia: '{rate:100}'
   editor: '{rate:100}'
+  chaves: '{rate:100}'
   formatada: '{rate:100}'
   altura: '{rate:100}'
+  compare: '{rate:100}'
 flags:
   quests: 0
   tracks: 0
   tasks: 0
   graph: 0
 lang: go
-index: clonar
+index: bst_insert
