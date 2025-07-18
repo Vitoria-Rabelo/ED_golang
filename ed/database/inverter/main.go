@@ -15,8 +15,14 @@ type Node struct {
 }
 
 func Reverse(node *Node) {
-	_ = node
-	// TODO
+	if node == nil{
+			return 
+		}
+
+		Reverse(node.Left)
+		Reverse(node.Right)
+		
+		node.Left, node.Right = node.Right, node.Left
 }
 
 // -----------------------------------------------------------------------------------
