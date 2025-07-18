@@ -15,9 +15,23 @@ type Node struct {
 }
 
 func BstInsert(values []int) *Node {
-	// TODO
-	_ = values
-	return nil
+	 var root *Node
+    for _,elem := range values {
+        root = insert(root,elem)
+    }
+    return root
+}
+
+func insert(node *Node, elem int) *Node {
+		if node == nil{
+			return  &Node{Value: elem}
+		}
+		if elem < node.Value {
+			node.Left = insert(node.Left, elem)
+		} else if elem > node.Value{
+			 node.Right = insert(node.Right, elem)
+		}
+		return node
 }
 
 // -----------------------------------------------------------------------------------
