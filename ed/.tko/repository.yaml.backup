@@ -2,23 +2,19 @@ remote: https://github.com/qxcodeed/arcade/blob/master/Readme.md
 version: 0.0.1
 database: database
 expanded:
-- introducao
-- recursao
-- recursão-desafios-
 - main-quest
-- algoritmo-de-retrocesso---backtracking
-- lista
+- árvore
 tasks:
   caminho: '{rate:100}'
   wordsearch: '{rate:12}'
   distancia: '{rate:100}'
+  editor: '{rate:100}'
   formatada: '{rate:100}'
   altura: '{rate:100}'
 flags:
-  minimum: 0
-  percent: 0
-  admin: 0
-  skills: 0
+  quests: 0
+  tracks: 0
+  tasks: 0
   graph: 0
 lang: go
-index: editor
+index: clonar

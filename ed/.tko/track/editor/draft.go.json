@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2025-07-14_17-34-46",
+            "content": "package main\n\nimport \"fmt\"\n\n\nfunc main() {\n\tvar entrada string\n    fmt.Scan(&entrada)\n\n    slice := make([]rune, 0)\n    p := 0\n\n    for _, elem := range entrada{\n        switch {\n            case ( elem >= 'a' && elem <= 'z') || elem == '-' :\n                slice = append(slice, 0) \n                copy(slice[p+1:], slice[p:])\n                slice[p] = elem\n                p++\n\n            case elem == 'R':\n                slice = append(slice, 0) \n                copy(slice[p+1:], slice[p:])\n                slice[p] = '\\n'\n                p++\n            \n            case elem == 'B':\n                if p > 0 {\n                    slice = append(slice[:p-1], slice[p:]...)\n\t\t\t        p--\n                }\n            case elem == '<':\n                if p > 0{\n                    p--\n                }\n            \n            case elem == 'D':\n                    if p < len(slice){\n                    slice = append(slice[:p], slice[p+1:]...)\n                    \n                    }\n            case elem == '>':\n                if p < len(slice){\n                    p++\n                }\n\n        }\n    }\n    fmt.Println(string(slice[:p]) + \"|\" + string(slice[p:]))\n}",
+            "lines": "50"
+        }
+    ]
+}

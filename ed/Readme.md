@@ -8,7 +8,6 @@ Significado das tags nas questões:
 | --------- | -----------
 | leet      | Problema de estilo LEET CODE para resolver problemas
 | link      | Link para problema externo
-| make      | Problema de código com testes construindo a estrutura de dados
 | open      | Problema de programação abertos sem testes
 | info      | Conteúdo informativo de leitura ou vídeo
 | task      | Outras atividades
@@ -80,56 +79,47 @@ Significado das tags nas questões:
 
 ### Vetor<!-- +vector:5 -->
 
-- [ ] `@vetbuild     *03 :make`[Lista Sequencial Dinâmica](https://github.com/qxcodeed/arcade/blob/master/base/vetbuild/Readme.md)
-- [ ] `@setbuild     *03 :make`[Conjunto usando Lista Sequencial Ordenada](https://github.com/qxcodeed/arcade/blob/master/base/setbuild/Readme.md)
-- [ ] `@bettersearch *01 :make`[Better Search com busca binária](https://github.com/qxcodeed/arcade/blob/master/base/bettersearch/Readme.md)
-- [ ] `@multiset     *02 :make`[MultiSet usando vetor dinâmico](https://github.com/qxcodeed/arcade/blob/master/base/multiset/Readme.md)
-- [ ] `@magicsearch  +01 :make`[Magic Search com busca binária](https://github.com/qxcodeed/arcade/blob/master/base/magicsearch/Readme.md)
-- [ ] `@iterador     +01 :make`[Criando um iterador](https://github.com/qxcodeed/arcade/blob/master/base/iterador/Readme.md)
+- [ ] `@vetbuild     *03 :leet`[Lista Sequencial Dinâmica](https://github.com/qxcodeed/arcade/blob/master/base/vetbuild/Readme.md)
+- [ ] `@setbuild     *03 :leet`[Conjunto usando Lista Sequencial Ordenada](https://github.com/qxcodeed/arcade/blob/master/base/setbuild/Readme.md)
+- [ ] `@bettersearch *01 :leet`[Better Search com busca binária](https://github.com/qxcodeed/arcade/blob/master/base/bettersearch/Readme.md)
+- [ ] `@multiset     *02 :leet`[MultiSet usando vetor dinâmico](https://github.com/qxcodeed/arcade/blob/master/base/multiset/Readme.md)
+- [ ] `@magicsearch  +01 :leet`[Magic Search com busca binária](https://github.com/qxcodeed/arcade/blob/master/base/magicsearch/Readme.md)
+- [ ] `@iterador     +01 :leet`[Criando um iterador](https://github.com/qxcodeed/arcade/blob/master/base/iterador/Readme.md)
 
 ### Lista<!-- +list:2 -->
 
-- [ ] `@lista_d1      *03 :make`[Lista Dupla com Nó Sentinela](https://github.com/qxcodeed/arcade/blob/master/base/lista_d1/Readme.md)
-- [ ] `@lista_d2      *03 :make`[Lista Dupla com Nó Iterador](https://github.com/qxcodeed/arcade/blob/master/base/lista_d2/Readme.md)
-- [ ] `@lista_d4      *02 :make`[Lista Circular utilizando Template](https://github.com/qxcodeed/arcade/blob/master/base/lista_d4/Readme.md)
+- [ ] `@lista_d1      *03 :leet`[Lista Dupla com Nó Sentinela](https://github.com/qxcodeed/arcade/blob/master/base/lista_d1/Readme.md)
+- [ ] `@lista_d2      *03 :leet`[Lista Dupla com Nó Iterador](https://github.com/qxcodeed/arcade/blob/master/base/lista_d2/Readme.md)
+- [ ] `@lista_d4      *02 :leet`[Lista Circular utilizando Template](https://github.com/qxcodeed/arcade/blob/master/base/lista_d4/Readme.md)
 - [ ] `@prin_list1    *03 :leet`[Princesa com lista ligada](https://github.com/qxcodeed/arcade/blob/master/base/prin_list1/Readme.md)
 - [ ] `@editor        *04 :leet`[Editor de texto](https://github.com/qxcodeed/arcade/blob/master/base/editor/Readme.md)
-- [ ] `@lista_d3      +03 :make`[Lista Dupla - Extra](https://github.com/qxcodeed/arcade/blob/master/base/lista_d3/Readme.md)
+- [ ] `@lista_d3      +03 :leet`[Lista Dupla - Extra](https://github.com/qxcodeed/arcade/blob/master/base/lista_d3/Readme.md)
 - [ ] `@prin_list2    +02 :leet`[Princesa2 com lista ligada](https://github.com/qxcodeed/arcade/blob/master/base/prin_list2/Readme.md)
 - [ ] `@controlz      +04 :leet`[Editor com Control Z](https://github.com/qxcodeed/arcade/blob/master/base/controlz/Readme.md)
 - [ ] `@editorint     *08 :open`[Editor de texto interativo](https://github.com/qxcodeed/arcade/blob/master/base/editorint/Readme.md)
 
 ### Deque, Pilha e Fila<!-- +linear:4 -->
 
-- [ ] `@bufferring  *04 :make`[Buffer Circular (Deque Dinâmico)](https://github.com/qxcodeed/arcade/blob/master/base/bufferring/Readme.md)
-- [ ] `@fila_enc    *02 :make`[Fila usando lista encadeada simples](https://github.com/qxcodeed/arcade/blob/master/base/fila_enc/Readme.md)
-- [ ] `@pilha       *02 :make`[Pilha sobre uma lista sequencial](https://github.com/qxcodeed/arcade/blob/master/base/pilha/Readme.md)
+- [ ] `@bufferring  *04 :leet`[Buffer Circular (Deque Dinâmico)](https://github.com/qxcodeed/arcade/blob/master/base/bufferring/Readme.md)
+- [ ] `@fila_enc    *02 :leet`[Fila usando lista encadeada simples](https://github.com/qxcodeed/arcade/blob/master/base/fila_enc/Readme.md)
+- [ ] `@pilha       *02 :leet`[Pilha sobre uma lista sequencial](https://github.com/qxcodeed/arcade/blob/master/base/pilha/Readme.md)
 - [ ] `@chaves      *01 :leet`[Fila: Chaves de disputa](https://github.com/qxcodeed/arcade/blob/master/base/chaves/Readme.md)
 - [ ] `@queimando   *02 :leet`[Pilha: Queimando árvores](https://github.com/qxcodeed/arcade/blob/master/base/queimando/Readme.md)
 - [ ] `@pilhado     *03 :leet`[Pilha: Fugindo do labirinto](https://github.com/qxcodeed/arcade/blob/master/base/pilhado/Readme.md)
 
-### Ordenação<!-- +sort:2 -->
-
-- [ ] `#ord_video   *01 :info`[Vídeo - implementação de todos os algoritmos de ordenação](https://youtu.be/k6nODikH_D8?si=tpbDRg139HvdzSIS)
-- [ ] `#ord_leitura *01 :info`[Algoritmos de Busca](https://github.com/qxcodeed/arcade/blob/master/wiki/busca_ordenacao/busca.md)
-- [ ] `#ord_simples *01 :info`[Algoritmos de Ordenação](https://github.com/qxcodeed/arcade/blob/master/wiki/busca_ordenacao/ordenacao.md)
-- [ ] `#ord_recurs  *01 :info`[Algoritmos de Ordenação Recursiva: Merge Sort e Quick Sort](https://github.com/qxcodeed/arcade/blob/master/wiki/ordenacao_recursiva/ordenacao_rec.md)
-- [ ] `@vacina      *01 :leet`[Otimizando vacinas](https://github.com/qxcodeed/arcade/blob/master/base/vacina/Readme.md)
-- [ ] `@indices     *02 :leet`[Índices originais](https://github.com/qxcodeed/arcade/blob/master/base/indices/Readme.md)
-- [ ] `@tapioca     *03 :make`[Tapioca Sort](https://github.com/qxcodeed/arcade/blob/master/base/tapioca/Readme.md)
-- [ ] `@mergevet    *03 :make`[Criando um vetor simples e fazendo um merge](https://github.com/qxcodeed/arcade/blob/master/base/mergevet/Readme.md)
-
 ### Árvore<!-- +tree:3 -->
 
-- [ ] `@serial      *01 :make`[Lendo uma árvore a partir de um serial](https://github.com/qxcodeed/arcade/blob/master/base/serial/Readme.md)
-- [ ] `@formatada   *01 :make`[Mostrando a árvore formatada](https://github.com/qxcodeed/arcade/blob/master/base/formatada/Readme.md)
-- [ ] `@soma        *01 :make`[Soma dos nós da árvore](https://github.com/qxcodeed/arcade/blob/master/base/soma/Readme.md)
-- [ ] `@altura      *02 :make`[Altura e profundidade da árvore](https://github.com/qxcodeed/arcade/blob/master/base/altura/Readme.md)
-- [ ] `@arvore-path *04 :make`[Caminho até o nó](https://github.com/qxcodeed/arcade/blob/master/base/arvore-path/Readme.md)
-- [ ] `@dividido    *02 :make`[Percorrer in-order](https://github.com/qxcodeed/arcade/blob/master/base/dividido/Readme.md)
-- [ ] `@arvore      *03 :make`[Construir árvore binaria CPP](https://github.com/qxcodeed/arcade/blob/master/base/arvore/Readme.md)
-- [ ] `@incompleta  *04 :make`[Arvore incompleta](https://github.com/qxcodeed/arcade/blob/master/base/incompleta/Readme.md)
-- [ ] `@abb         *04 :make`[Árvore Binária de Busca](https://github.com/qxcodeed/arcade/blob/master/base/abb/Readme.md)
+- [ ] `@serial      *01 :leet`[Lendo uma árvore a partir de um serial](https://github.com/qxcodeed/arcade/blob/master/base/serial/Readme.md)
+- [ ] `@formatada   *01 :leet`[Mostrando a árvore formatada](https://github.com/qxcodeed/arcade/blob/master/base/formatada/Readme.md)
+- [ ] `@inverter    *01 :leet`[Inverter a árvore](https://github.com/qxcodeed/arcade/blob/master/base/inverter/Readme.md)
+- [ ] `@clonar      *01 :leet`[Clonando a árvore](https://github.com/qxcodeed/arcade/blob/master/base/clonar/Readme.md)
+- [ ] `@soma        *01 :leet`[Soma e Mínimo Recursivos](https://github.com/qxcodeed/arcade/blob/master/base/soma/Readme.md)
+- [ ] `@altura      *02 :leet`[Altura e profundidade da árvore](https://github.com/qxcodeed/arcade/blob/master/base/altura/Readme.md)
+- [ ] `@compare     *02 :leet`[Mostrando a árvore formatada](https://github.com/qxcodeed/arcade/blob/master/base/compare/Readme.md)
+- [ ] `@arvore-path *02 :leet`[Caminho até o nó](https://github.com/qxcodeed/arcade/blob/master/base/arvore-path/Readme.md)
+- [ ] `@bst_insert  *03 :leet`[Árvore Binária de Busca - Inserção](https://github.com/qxcodeed/arcade/blob/master/base/bst_insert/Readme.md)
+- [ ] `@bst_serial  *02 :leet`[Árvore Binária de Busca - Serializar](https://github.com/qxcodeed/arcade/blob/master/base/bst_serial/Readme.md)
+- [ ] `@bst_remove  *04 :leet`[Árvore Binária de Busca - Remoção](https://github.com/qxcodeed/arcade/blob/master/base/bst_remove/Readme.md)
 
 ## Side Quests
 
@@ -165,6 +155,14 @@ Nesse primeiro bloco, vamos aprender ou relembrar os conceitos básicos da lingu
 
 ### A consertar<!-- l:cpp -->
 
+- [ ] `#ord_video     +00 :info`[Vídeo - implementação de todos os algoritmos de ordenação](https://youtu.be/k6nODikH_D8?si=tpbDRg139HvdzSIS)
+- [ ] `#ord_leitura   +00 :info`[Algoritmos de Busca](https://github.com/qxcodeed/arcade/blob/master/wiki/busca_ordenacao/busca.md)
+- [ ] `#ord_simples   +00 :info`[Algoritmos de Ordenação](https://github.com/qxcodeed/arcade/blob/master/wiki/busca_ordenacao/ordenacao.md)
+- [ ] `#ord_recurs    +00 :info`[Algoritmos de Ordenação Recursiva: Merge Sort e Quick Sort](https://github.com/qxcodeed/arcade/blob/master/wiki/ordenacao_recursiva/ordenacao_rec.md)
+- [ ] `@vacina        +00 :leet`[Otimizando vacinas](https://github.com/qxcodeed/arcade/blob/master/base/vacina/Readme.md)
+- [ ] `@indices       +00 :leet`[Índices originais](https://github.com/qxcodeed/arcade/blob/master/base/indices/Readme.md)
+- [ ] `@tapioca       +00 :leet`[Tapioca Sort](https://github.com/qxcodeed/arcade/blob/master/base/tapioca/Readme.md)
+- [ ] `@mergevet      +00 :leet`[Criando um vetor simples e fazendo um merge](https://github.com/qxcodeed/arcade/blob/master/base/mergevet/Readme.md)
 - [ ] `@hex           *00  :open`[Desenhando labirinto perfeito](https://github.com/qxcodeed/arcade/blob/master/base/hex/Readme.md)
 - [ ] `@budega        *00 :leet`[Gerencie a fila de espera e atendimento](https://github.com/qxcodepoo/arcade/blob/master/base/budega/Readme.md)
 - [ ] `@agenda        *00 :leet`[Gerencie contatos e telefones](https://github.com/qxcodepoo/arcade/blob/master/base/agenda/Readme.md)
@@ -172,10 +170,10 @@ Nesse primeiro bloco, vamos aprender ou relembrar os conceitos básicos da lingu
 - [ ] `#cpp_oper      *00 :info`[Sobrecarga de operadores de classes](https://github.com/qxcodeed/arcade/blob/master/wiki/tad/sobrecarga_operadores.md)
 - [ ] `@ponto         *00 :leet`[Implemente a classe ponto](https://github.com/qxcodeed/arcade/blob/master/base/ponto/Readme.md)
 - [ ] `@fracao        *00 :leet`[Implemente a classe fração reduzida](https://github.com/qxcodeed/arcade/blob/master/base/fracao/Readme.md)
-- [ ] `@pontoGo       *00 :make`[Implemente a classe ponto](https://github.com/qxcodeed/arcade/blob/master/base/pontoGo/Readme.md)
-- [ ] `@fracaoGo      *00 :make`[Implemente a classe fração reduzida](https://github.com/qxcodeed/arcade/blob/master/base/fracaoGo/Readme.md)
-- [ ] `@lista_simples +05 :make`[Lista simples 1](https://github.com/qxcodeed/arcade/blob/master/base/lista_simples/Readme.md)
-- [ ] `@list_basic    *01 :make`[Lista Simplesmente Encadeada - CPP](https://github.com/qxcodeed/arcade/blob/master/base/list_basic/Readme.md)
+- [ ] `@pontoGo       *00 :leet`[Implemente a classe ponto](https://github.com/qxcodeed/arcade/blob/master/base/pontoGo/Readme.md)
+- [ ] `@fracaoGo      *00 :leet`[Implemente a classe fração reduzida](https://github.com/qxcodeed/arcade/blob/master/base/fracaoGo/Readme.md)
+- [ ] `@lista_simples +05 :leet`[Lista simples 1](https://github.com/qxcodeed/arcade/blob/master/base/lista_simples/Readme.md)
+- [ ] `@list_basic    *01 :leet`[Lista Simplesmente Encadeada - CPP](https://github.com/qxcodeed/arcade/blob/master/base/list_basic/Readme.md)
 - [ ] `@cauda         *00 :leet`[Lista Simplesmente Encadeada com Cauda](https://github.com/qxcodeed/arcade/blob/master/base/cauda/Readme.md)
 - [ ] `@duplamente    *00 :leet`[Lista Dupla - Algoritmos](https://github.com/qxcodeed/arcade/blob/master/base/duplamente/Readme.md)
 - [ ] `@invertendo    *00 :leet`[Inversão usando next e previous](https://github.com/qxcodeed/arcade/blob/master/base/invertendo/Readme.md)

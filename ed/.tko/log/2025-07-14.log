@@ -1,1 +1,10 @@
 2025-07-14 16:05:43, MOVE, v:1, k:editor, mode:DOWN
+2025-07-14 17:34:45, MOVE, v:1, k:editor, mode:PICK
+2025-07-14 17:34:46, EXEC, v:1, k:editor, mode:FULL, rate:100, size:50
+2025-07-14 17:34:46, MOVE, v:1, k:editor, mode:BACK
+2025-07-14 17:34:53, MOVE, v:1, k:lista_d3, mode:PICK
+2025-07-14 17:34:54, EXEC, v:1, k:lista_d3, mode:FULL, rate:0
+2025-07-14 17:34:58, MOVE, v:1, k:lista_d3, mode:BACK
+2025-07-14 17:35:04, MOVE, v:1, k:lista_d3, mode:PICK
+2025-07-14 17:35:05, EXEC, v:1, k:lista_d3, mode:FULL, rate:0
+2025-07-14 17:35:05, MOVE, v:1, k:lista_d3, mode:BACK
