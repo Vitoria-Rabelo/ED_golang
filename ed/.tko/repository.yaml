@@ -19,4 +19,4 @@ flags:
   tasks: 0
   graph: 0
 lang: go
-index: bst_serial
+index: bst_remove
